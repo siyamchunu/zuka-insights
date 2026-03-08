@@ -4,6 +4,7 @@ import { ArrowRight, Info, AlertTriangle, CheckCircle, BarChart2, TrendingUp, La
 import ETFSearch from './components/ETFSearch';
 import VennDiagram from './components/VennDiagram';
 import HoldingsTable from './components/HoldingsTable';
+import SectorBreakdown from './components/SectorBreakdown';
 import DisclaimerModal from './components/DisclaimerModal';
 import CookieConsent from './components/CookieConsent';
 import Footer from './components/Footer';
@@ -32,11 +33,32 @@ function App() {
       const getAggregatedMap = (holdings) => {
         const map = new Map();
         holdings.forEach(h => {
-          const ticker = h.ticker.trim().toUpperCase();
+          // Normalise both casing conventions: local SA uses lowercase, international uses PascalCase
+          const ticker = (h.ticker || h.Ticker || '').trim().toUpperCase();
+          const weight = h.weight ?? h.Weight ?? 0;
+          if (!ticker) return;
           const currentWeight = map.get(ticker) || 0;
-          map.set(ticker, currentWeight + h.weight);
+          map.set(ticker, currentWeight + parseFloat(weight));
         });
         return map;
+      };
+
+      // Compute sector breakdown for a given holdings array (returns null if no sector data)
+      const getSectorBreakdown = (holdings) => {
+        const map = new Map();
+        let hasSector = false;
+        holdings.forEach(h => {
+          const sector = h.Sector || h.sector;
+          if (sector) {
+            hasSector = true;
+            const weight = parseFloat(h.Weight ?? h.weight ?? 0);
+            map.set(sector, (map.get(sector) || 0) + weight);
+          }
+        });
+        if (!hasSector) return null;
+        return Array.from(map.entries())
+          .map(([sector, weight]) => ({ sector, weight: parseFloat(weight.toFixed(2)) }))
+          .sort((a, b) => b.weight - a.weight);
       };
 
       const mapA = getAggregatedMap(etfA.holdings);
@@ -57,9 +79,13 @@ function App() {
         
         if (overlap > 0) {
           overlapScore += overlap;
+          const findName = (holdings, tick) => {
+            const h = holdings.find(h => (h.ticker || h.Ticker || '').trim().toUpperCase() === tick);
+            return h ? (h.name || h.Name || tick) : tick;
+          };
           sharedHoldings.push({
             ticker,
-            name: etfA.holdings.find(h => h.ticker === ticker)?.name || etfB.holdings.find(h => h.ticker === ticker)?.name,
+            name: findName(etfA.holdings, ticker) || findName(etfB.holdings, ticker),
             weightA: parseFloat(weightA.toFixed(2)),
             weightB: parseFloat(weightB.toFixed(2)),
             overlap: parseFloat(overlap.toFixed(2))
@@ -76,7 +102,9 @@ function App() {
         etfAName: etfA.name,
         etfBName: etfB.name,
         countA: etfA.holdings.length,
-        countB: etfB.holdings.length
+        countB: etfB.holdings.length,
+        sectorA: getSectorBreakdown(etfA.holdings),
+        sectorB: getSectorBreakdown(etfB.holdings),
       });
       
       setIsAnalyzing(false);
@@ -246,6 +274,14 @@ function App() {
                 <div className="bg-white rounded-[2rem] border-2 border-forest/5 p-1 overflow-hidden">
                     <HoldingsTable holdings={result.shared} />
                 </div>
+
+                {/* Sector Analysis */}
+                <SectorBreakdown
+                  sectorA={result.sectorA}
+                  sectorB={result.sectorB}
+                  nameA={result.etfAName}
+                  nameB={result.etfBName}
+                />
               </div>
             )}
           </div>
