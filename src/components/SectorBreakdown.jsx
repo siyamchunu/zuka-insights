@@ -112,10 +112,10 @@ export default function SectorBreakdown({ sectorA, sectorB, nameA, nameB }) {
           <div className="p-2 bg-bone rounded-lg">
             <PieChart size={20} className="text-forest/40" strokeWidth={1.5} />
           </div>
-          <h3 className="font-bold text-forest text-lg tracking-tight">Sector Analysis</h3>
+          <h2 className="font-bold text-forest text-lg tracking-tight">Sector Analysis</h2>
         </div>
         <div className="flex items-start gap-3 bg-bone rounded-2xl p-5">
-          <Info size={16} className="text-forest/40 mt-0.5 flex-shrink-0" strokeWidth={1.5} />
+          <Info size={16} className="text-forest/40 mt-0.5 flex-shrink-0" strokeWidth={1.5} aria-hidden="true" />
           <p className="text-sm text-forest/60 leading-relaxed">
             Sector data is not available for these ETFs. Sector analysis is currently
             supported for <span className="font-semibold text-forest/80">international index ETFs</span> (e.g.
@@ -130,15 +130,15 @@ export default function SectorBreakdown({ sectorA, sectorB, nameA, nameB }) {
   const merged = hasBoth ? mergeSectors(sectorA, sectorB) : null;
 
   return (
-    <div className="bg-white rounded-[2rem] border-2 border-forest/5 overflow-hidden">
+    <div className="bg-white rounded-[2rem] border-2 border-forest/5 overflow-hidden" role="region" aria-label="Sector analysis comparison">
       {/* Header */}
       <div className="px-8 pt-8 pb-6 flex items-center justify-between flex-wrap gap-4">
         <div className="flex items-center gap-3">
-          <div className="p-2 bg-bone rounded-lg">
+          <div className="p-2 bg-bone rounded-lg" aria-hidden="true">
             <PieChart size={20} className="text-forest" strokeWidth={1.5} />
           </div>
           <div>
-            <h3 className="font-bold text-forest text-lg tracking-tight">Sector Analysis</h3>
+            <h2 className="font-bold text-forest text-lg tracking-tight">Sector Analysis</h2>
             {!hasBoth && (
               <p className="text-xs text-forest/40 mt-0.5">
                 Sector data available for {hasA ? nameA : nameB} only

@@ -22,10 +22,10 @@ const HoldingsTable = ({ holdings }) => {
   };
 
   return (
-    <div className="w-full bg-white rounded-3xl border border-forest/10 shadow-sm overflow-hidden">
+    <div className="w-full bg-white rounded-3xl border border-forest/10 shadow-sm overflow-hidden" role="region" aria-label="Shared holdings between selected ETFs">
       <div className="p-6 border-b border-forest/5 flex justify-between items-center bg-bone/30">
-        <h3 className="font-bold text-forest">Shared Holdings Detail</h3>
-        <span className="text-xs font-bold text-forest/40 uppercase tracking-widest">{holdings.length} Assets</span>
+        <h2 className="font-bold text-forest">Shared Holdings Detail</h2>
+        <span className="text-xs font-bold text-forest/40 uppercase tracking-widest" aria-label={`${holdings.length} shared assets`}>{holdings.length} Assets</span>
       </div>
       
       <div className="overflow-x-auto">

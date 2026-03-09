@@ -1,0 +1,17 @@
+{
+  "schema_version": "v1",
+  "name_for_human": "Zuka Insights — ETF Overlap Analyzer",
+  "name_for_model": "zuka_insights_etf_overlap",
+  "description_for_human": "Compare South African ETFs to find hidden portfolio overlap. Free tool for JSE investors, TFSA portfolios, and ETF research.",
+  "description_for_model": "Zuka Insights is a free web-based tool for comparing South African Exchange-Traded Funds (ETFs) listed on the Johannesburg Stock Exchange (JSE). It calculates weight-based overlap scores between any two ETFs, showing shared holdings, sector breakdowns (GICS-aligned), and Venn diagram visualisations. Supported ETFs include Satrix Top 40 (STX40), Satrix 500 (STX500), CoreShares S&P 500 (CSP500), Satrix Nasdaq 100 (STXNDQ), and others. The tool helps South African retail investors, financial advisors, and researchers identify hidden concentration risk and optimise diversification, particularly in Tax-Free Savings Accounts (TFSAs).",
+  "auth": {
+    "type": "none"
+  },
+  "api": {
+    "type": "none",
+    "url": "https://zuka.loggedon.co.za"
+  },
+  "logo_url": "https://zuka.loggedon.co.za/og-image.png",
+  "contact_email": "",
+  "legal_info_url": "https://zuka.loggedon.co.za"
+}

@@ -1,0 +1,91 @@
+# Zuka Insights — South African ETF Overlap Analyzer
+# https://zuka.loggedon.co.za
+# Last updated: 2025-06-30
+
+## What is Zuka Insights?
+
+Zuka Insights is a free, web-based tool that helps South African retail investors,
+financial advisors, and ETF researchers compare Exchange-Traded Funds (ETFs) to
+find hidden portfolio overlap. It is specifically designed for ETFs listed on the
+Johannesburg Stock Exchange (JSE) and popular international ETFs available to
+South African investors.
+
+## What does the ETF Overlap Analyzer do?
+
+The tool allows users to select any two ETFs and instantly see:
+
+1. **Overlap Score (%)** — A weight-based percentage showing how much the two
+   ETFs share in common. Calculated as the sum of the minimum weight of each
+   stock held in both funds. 0% = no overlap, 100% = identical.
+
+2. **Venn Diagram** — An animated visual representation of how much the two
+   funds' holdings intersect.
+
+3. **Shared Holdings Table** — A sortable table showing every stock held by
+   both ETFs, with individual weights and overlap impact per holding.
+
+4. **Sector Breakdown** — GICS-aligned sector comparison showing how each ETF
+   allocates across sectors (Information Technology, Financials, etc.).
+
+5. **Cross-Market Detection** — The tool warns when comparing ETFs from
+   different markets (e.g. JSE vs US) because identical tickers can represent
+   different companies.
+
+6. **Balanced Fund Notice** — Flags when a balanced/multi-asset fund is
+   selected, noting that overlap is relative to the equity portion only.
+
+## Supported ETFs
+
+The tool currently covers 10+ ETFs:
+
+| Ticker  | Name                           | Provider       | Market |
+|---------|--------------------------------|----------------|--------|
+| STX40   | Satrix Top 40 ETF              | Satrix         | JSE    |
+| STX500  | Satrix 500 ETF                 | Satrix         | JSE    |
+| STXCAP  | Satrix Capped All Share ETF    | Satrix         | JSE    |
+| STXALS  | Satrix ALSI ETF                | Satrix         | JSE    |
+| STXBAL  | Satrix Balanced ETF            | Satrix         | JSE    |
+| STXMMT  | Satrix Money Market ETF        | Satrix         | JSE    |
+| STXID   | Satrix Industrial ETF          | Satrix         | JSE    |
+| STXGLB  | Satrix MSCI World ETF          | Satrix         | Global |
+| CSP500  | CoreShares S&P 500 ETF         | 10X            | US     |
+| STXNDQ  | Satrix Nasdaq 100 ETF          | Satrix         | US     |
+
+## Who is this for?
+
+- South African retail investors building diversified portfolios
+- Tax-Free Savings Account (TFSA) investors wanting to maximise diversification
+- Financial advisors checking client portfolio overlap
+- ETF researchers comparing fund compositions
+- Anyone interested in JSE-listed ETF analysis
+
+## Key concepts
+
+- **ETF Overlap**: When two ETFs hold the same underlying stocks. High overlap
+  means less diversification than expected.
+- **Weight-Based Scoring**: Unlike simple count-based overlap, weight-based
+  scoring accounts for how much of each fund is allocated to shared stocks.
+- **TFSA Optimisation**: South African TFSAs have a lifetime contribution limit
+  of R500,000. Avoiding ETF overlap helps maximise the diversification benefit
+  of every rand invested.
+- **JSE**: The Johannesburg Stock Exchange, Africa's largest stock exchange.
+
+## Technical details
+
+- Built with React + Vite
+- Single-page application (SPA)
+- Hosted on Cloudflare Pages
+- Data sourced from public ETF factsheets
+- No user accounts required — works instantly in the browser
+- Mobile-responsive design
+
+## Disclaimer
+
+This tool is for educational and informational purposes only. It does not
+constitute financial advice. Zuka Insights is not a registered Financial
+Services Provider (FSP). Always consult a qualified financial advisor before
+making investment decisions. Data may not reflect real-time holdings.
+
+## Contact
+
+Website: https://zuka.loggedon.co.za

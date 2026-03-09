@@ -1,0 +1,51 @@
+# Zuka Insights — ETF Overlap Analyzer
+# https://zuka.loggedon.co.za
+#
+# We welcome all crawlers, including AI/LLM crawlers.
+# Our content is free educational material for SA investors.
+
+User-agent: *
+Allow: /
+
+# AI / LLM Crawlers — explicitly welcomed
+User-agent: GPTBot
+Allow: /
+
+User-agent: ChatGPT-User
+Allow: /
+
+User-agent: Google-Extended
+Allow: /
+
+User-agent: Googlebot
+Allow: /
+
+User-agent: Bingbot
+Allow: /
+
+User-agent: Anthropic-ai
+Allow: /
+
+User-agent: Claude-Web
+Allow: /
+
+User-agent: PerplexityBot
+Allow: /
+
+User-agent: Bytespider
+Allow: /
+
+User-agent: CCBot
+Allow: /
+
+User-agent: cohere-ai
+Allow: /
+
+User-agent: Meta-ExternalAgent
+Allow: /
+
+# Sitemap
+Sitemap: https://zuka.loggedon.co.za/sitemap.xml
+
+# LLM-friendly site description
+# See /llms.txt for structured information about this site

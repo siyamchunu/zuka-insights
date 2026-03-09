@@ -17,7 +17,7 @@ const VennDiagram = ({ score, theme = 'light' }) => {
   const offset = 60 * (1 - (percentage / 100));
 
   return (
-    <div className="relative h-56 md:h-64 w-full flex items-center justify-center my-4">
+    <div className="relative h-56 md:h-64 w-full flex items-center justify-center my-4" role="img" aria-label={`Venn diagram showing ${score}% overlap between two ETFs`}>
       {/* Circle A */}
       <motion.div
         initial={{ x: -100, opacity: 0 }}

@@ -1,13 +1,203 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en-ZA" dir="ltr">
   <head>
     <meta charset="UTF-8" />
-    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>ETF Overlap Analyzer | Zuka Insights</title>
+
+    <!-- Primary Meta Tags -->
+    <title>Zuka Insights — South African ETF Overlap Analyzer | Compare JSE ETFs</title>
+    <meta name="title" content="Zuka Insights — South African ETF Overlap Analyzer | Compare JSE ETFs" />
+    <meta name="description" content="Free tool to compare South African ETFs and find portfolio overlap. Analyse Satrix, 10X, JSE-listed ETFs with weight-based overlap scores, Venn diagrams, and sector breakdowns. Ideal for TFSA investors." />
+    <meta name="keywords" content="South African ETF overlap, JSE ETF comparison tool, Satrix ETF overlap, compare South African ETFs, ETF portfolio overlap analyzer South Africa, TFSA ETF comparison, Satrix Top 40, STX40, STX500, STXNDQ, CSP500, JSE ETFs, ETF diversification, portfolio overlap" />
+    <meta name="author" content="Zuka Insights" />
+    <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1" />
+    <link rel="canonical" href="https://zuka.loggedon.co.za" />
+    <meta name="theme-color" content="#0A2323" />
+    <meta name="color-scheme" content="light" />
+    <meta name="geo.region" content="ZA" />
+    <meta name="geo.placename" content="South Africa" />
+
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://zuka.loggedon.co.za" />
+    <meta property="og:site_name" content="Zuka Insights" />
+    <meta property="og:title" content="Zuka Insights — South African ETF Overlap Analyzer" />
+    <meta property="og:description" content="Compare South African ETFs side-by-side. Find hidden portfolio overlap with weight-based analysis, Venn diagrams, and sector breakdowns. Free tool for JSE investors." />
+    <meta property="og:image" content="https://zuka.loggedon.co.za/og-image.png" />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+    <meta property="og:image:alt" content="Zuka Insights ETF Overlap Analyzer — compare South African ETFs visually" />
+    <meta property="og:locale" content="en_ZA" />
+
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:url" content="https://zuka.loggedon.co.za" />
+    <meta name="twitter:title" content="Zuka Insights — South African ETF Overlap Analyzer" />
+    <meta name="twitter:description" content="Compare South African ETFs side-by-side. Find hidden portfolio overlap with weight-based analysis, Venn diagrams, and sector breakdowns." />
+    <meta name="twitter:image" content="https://zuka.loggedon.co.za/og-image.png" />
+    <meta name="twitter:image:alt" content="Zuka Insights ETF Overlap Analyzer — compare South African ETFs visually" />
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
+
+    <!-- Performance: Preconnect & DNS Prefetch -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link rel="dns-prefetch" href="https://fonts.googleapis.com" />
+    <link rel="dns-prefetch" href="https://fonts.gstatic.com" />
+
+    <!-- Structured Data: Organization -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Organization",
+      "name": "Zuka Insights",
+      "url": "https://zuka.loggedon.co.za",
+      "logo": "https://zuka.loggedon.co.za/og-image.png",
+      "description": "Free tools for South African retail investors to analyse and compare JSE-listed ETFs.",
+      "sameAs": []
+    }
+    </script>
+
+    <!-- Structured Data: WebApplication -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "WebApplication",
+      "name": "Zuka Insights ETF Overlap Analyzer",
+      "url": "https://zuka.loggedon.co.za",
+      "description": "Compare South African ETFs to find portfolio overlap. Supports Satrix Top 40, Satrix 500, S&P 500, Nasdaq 100 and more JSE-listed ETFs with weight-based overlap scores, Venn diagrams, and sector breakdowns.",
+      "applicationCategory": "FinanceApplication",
+      "operatingSystem": "Web",
+      "browserRequirements": "Requires a modern web browser with JavaScript enabled",
+      "offers": {
+        "@type": "Offer",
+        "price": "0",
+        "priceCurrency": "ZAR"
+      },
+      "author": {
+        "@type": "Organization",
+        "name": "Zuka Insights"
+      },
+      "featureList": [
+        "Weight-based ETF overlap scoring",
+        "Visual Venn diagram comparison",
+        "Sector breakdown analysis (GICS-aligned)",
+        "Shared holdings detail with sortable table",
+        "Cross-market detection (JSE, US, Global)",
+        "Balanced fund equity-portion adjustment",
+        "10+ JSE-listed ETFs including STX40, STX500, CSP500, STXNDQ"
+      ],
+      "screenshot": "https://zuka.loggedon.co.za/og-image.png",
+      "softwareVersion": "1.0.0",
+      "inLanguage": "en-ZA"
+    }
+    </script>
+
+    <!-- Structured Data: BreadcrumbList -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Home",
+          "item": "https://zuka.loggedon.co.za"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "ETF Overlap Analyzer",
+          "item": "https://zuka.loggedon.co.za"
+        }
+      ]
+    }
+    </script>
+
+    <!-- Structured Data: FAQPage (Featured Snippets + AI Answers) -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "FAQPage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "What is ETF overlap and why does it matter?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "ETF overlap occurs when two or more ETFs in your portfolio hold the same underlying stocks or assets. High overlap means you are less diversified than you think — you are effectively doubling down on the same companies. For example, the Satrix Top 40 (STX40) and Satrix SWIX Top 40 (STXSWX) share many JSE-listed stocks, leading to significant overlap. Checking overlap helps South African investors avoid hidden concentration risk, especially in tax-free savings accounts (TFSAs) where contribution limits are capped."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "How does the Zuka Insights ETF Overlap Analyzer work?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "The tool compares the holdings of two JSE-listed ETFs side by side. It calculates a weight-based overlap score by finding the minimum weight of each stock held in both funds and summing those minimums. A score of 0% means no shared holdings, while 100% means the funds are identical. Results include a visual Venn diagram, a sortable table of shared holdings with their individual weights, and a GICS-aligned sector breakdown comparison."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Which South African ETFs can I compare on Zuka Insights?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Zuka Insights currently supports 10+ ETFs listed on the Johannesburg Stock Exchange (JSE) and international markets, including: Satrix Top 40 (STX40), Satrix 500 (STX500), Satrix Capped All Share (STXCAP), Satrix ALSI (STXALS), Satrix Balanced (STXBAL), Satrix Money Market (STXMMT), Satrix Industrial (STXID), Satrix MSCI World (STXGLB), CoreShares S&P 500 (CSP500), and Satrix Nasdaq 100 (STXNDQ). Holdings data is sourced from public factsheets and updated periodically."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Is the Zuka Insights ETF Overlap tool free to use?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Yes, the Zuka Insights ETF Overlap Analyzer is completely free to use. It is an educational tool designed for South African retail investors, financial advisors, and ETF researchers. No registration or account is required — simply select two ETFs and click Analyze."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Can I compare South African ETFs with international ETFs?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "The tool detects cross-market comparisons (e.g., a JSE equity ETF vs a US-listed index ETF) and disables the overlap score for accuracy. Tickers can represent different companies across markets — for example, JSE ticker SPG (Super Group) vs US ticker SPG (Simon Property Group). You can still view individual sector breakdowns for each fund."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "How do I reduce ETF overlap in my TFSA portfolio?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "To reduce overlap in your Tax-Free Savings Account (TFSA): 1) Use an overlap tool like Zuka Insights to identify which ETFs share holdings. 2) Choose ETFs that track different indices or markets — e.g. pair a local equity ETF (STX40) with an international ETF (CSP500 or STXNDQ). 3) Consider adding asset classes like bonds (STXGOV) or property (STXPRO) for true diversification. 4) Avoid holding multiple large-cap SA equity ETFs as they tend to overlap heavily on the top JSE stocks."
+          }
+        }
+      ]
+    }
+    </script>
   </head>
   <body>
     <div id="root"></div>
+    <noscript>
+      <div style="max-width: 800px; margin: 60px auto; padding: 20px; font-family: sans-serif; color: #0A2323;">
+        <h1>Zuka Insights — South African ETF Overlap Analyzer</h1>
+        <p>Compare South African ETFs to find hidden portfolio overlap. This free tool analyses Satrix, 10X, and other JSE-listed ETFs with weight-based overlap scores, Venn diagrams, and sector breakdowns.</p>
+        <h2>Supported ETFs</h2>
+        <ul>
+          <li>Satrix Top 40 (STX40)</li>
+          <li>Satrix 500 (STX500)</li>
+          <li>Satrix Capped All Share (STXCAP)</li>
+          <li>Satrix ALSI (STXALS)</li>
+          <li>Satrix Balanced (STXBAL)</li>
+          <li>Satrix Money Market (STXMMT)</li>
+          <li>Satrix Industrial (STXID)</li>
+          <li>Satrix MSCI World (STXGLB)</li>
+          <li>CoreShares S&amp;P 500 (CSP500)</li>
+          <li>Satrix Nasdaq 100 (STXNDQ)</li>
+        </ul>
+        <p>Please enable JavaScript to use the interactive ETF comparison tool.</p>
+      </div>
+    </noscript>
     <script type="module" src="/src/main.jsx"></script>
   </body>
 </html>

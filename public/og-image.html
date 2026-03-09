@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<!--
+  OG Image Design Reference for Zuka Insights
+  =============================================
+  This file is a visual reference for creating the og-image.png (1200x630px).
+  Open this file in a browser and take a screenshot, or use a tool like
+  Puppeteer / html-to-image to render it as a PNG.
+
+  Save the output as: public/og-image.png
+
+  Design:
+  - Background: #0A2323 (forest green / dark)
+  - Accent: #D4FF45 (lime)
+  - Text: White + Lime
+  - Shows: Brand name, tool name, key value prop, example ETFs
+-->
+<head>
+  <meta charset="UTF-8" />
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body {
+      width: 1200px;
+      height: 630px;
+      background: #0A2323;
+      font-family: -apple-system, BlinkMacSystemFont, 'Helvetica Neue', Arial, sans-serif;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      padding: 80px;
+      position: relative;
+      overflow: hidden;
+    }
+    /* Decorative gradient blob */
+    .blob {
+      position: absolute;
+      top: -150px;
+      right: -100px;
+      width: 500px;
+      height: 500px;
+      background: radial-gradient(circle, rgba(212,255,69,0.15) 0%, transparent 70%);
+      border-radius: 50%;
+    }
+    .blob-2 {
+      position: absolute;
+      bottom: -200px;
+      left: -50px;
+      width: 400px;
+      height: 400px;
+      background: radial-gradient(circle, rgba(16,185,129,0.1) 0%, transparent 70%);
+      border-radius: 50%;
+    }
+    .logo {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      margin-bottom: 40px;
+    }
+    .logo-icon {
+      width: 48px;
+      height: 48px;
+      background: #D4FF45;
+      border-radius: 12px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: #0A2323;
+      font-weight: 900;
+      font-size: 24px;
+    }
+    .logo-text {
+      color: #D4FF45;
+      font-weight: 800;
+      font-size: 20px;
+      letter-spacing: -0.5px;
+    }
+    h1 {
+      color: #FFFFFF;
+      font-size: 64px;
+      font-weight: 900;
+      line-height: 1.05;
+      letter-spacing: -2px;
+      margin-bottom: 20px;
+      max-width: 800px;
+    }
+    h1 span {
+      color: #D4FF45;
+    }
+    p {
+      color: rgba(255,255,255,0.6);
+      font-size: 22px;
+      line-height: 1.5;
+      max-width: 600px;
+      margin-bottom: 40px;
+    }
+    .etfs {
+      display: flex;
+      gap: 12px;
+      flex-wrap: wrap;
+    }
+    .etf-tag {
+      background: rgba(255,255,255,0.08);
+      border: 1px solid rgba(255,255,255,0.12);
+      color: rgba(255,255,255,0.7);
+      padding: 8px 16px;
+      border-radius: 8px;
+      font-size: 14px;
+      font-weight: 600;
+      letter-spacing: 0.5px;
+    }
+    .domain {
+      position: absolute;
+      bottom: 40px;
+      right: 80px;
+      color: rgba(255,255,255,0.3);
+      font-size: 16px;
+      font-weight: 600;
+    }
+  </style>
+</head>
+<body>
+  <div class="blob"></div>
+  <div class="blob-2"></div>
+  <div class="logo">
+    <div class="logo-icon">Z</div>
+    <div class="logo-text">ZUKA INSIGHTS</div>
+  </div>
+  <h1>South African <span>ETF Overlap</span> Analyzer</h1>
+  <p>Compare JSE-listed ETFs to find hidden portfolio overlap. Free tool for SA investors.</p>
+  <div class="etfs">
+    <div class="etf-tag">STX40</div>
+    <div class="etf-tag">STX500</div>
+    <div class="etf-tag">CSP500</div>
+    <div class="etf-tag">STXNDQ</div>
+    <div class="etf-tag">STXGLB</div>
+    <div class="etf-tag">STXCAP</div>
+    <div class="etf-tag">+ more</div>
+  </div>
+  <div class="domain">zuka.loggedon.co.za</div>
+</body>
+</html>
