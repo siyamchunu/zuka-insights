@@ -1,5 +1,4 @@
-import React, { useState } from 'react';
-import etfData from './data/etfs.json';
+import React, { useState, useEffect } from 'react';
 import { ArrowRight, Info, AlertTriangle, CheckCircle, BarChart2, TrendingUp, Layers, ArrowUpDown } from 'lucide-react';
 import ETFSearch from './components/ETFSearch';
 import VennDiagram from './components/VennDiagram';
@@ -10,10 +9,52 @@ import CookieConsent from './components/CookieConsent';
 import Footer from './components/Footer';
 
 function App() {
+  const [etfData, setEtfData] = useState(null);
+  const [loading, setLoading] = useState(true);
+  const [error, setError] = useState(null);
   const [etfAId, setEtfAId] = useState('');
   const [etfBId, setEtfBId] = useState('');
   const [isAnalyzing, setIsAnalyzing] = useState(false);
   const [result, setResult] = useState(null);
+
+  useEffect(() => {
+    fetch('/data/etfs.json')
+      .then(res => {
+        if (!res.ok) throw new Error(`HTTP ${res.status}: ${res.statusText}`);
+        return res.json();
+      })
+      .then(data => {
+        setEtfData(data);
+        setLoading(false);
+      })
+      .catch(err => {
+        setError(err.message);
+        setLoading(false);
+      });
+  }, []);
+
+  if (loading) {
+    return (
+      <div className="min-h-screen bg-neutral-50 flex items-center justify-center">
+        <div className="text-center">
+          <div className="w-10 h-10 bg-forest rounded-xl flex items-center justify-center text-lime font-black text-xl mx-auto mb-4 animate-pulse">Z</div>
+          <p className="text-forest/60 font-medium">Loading ETF data...</p>
+        </div>
+      </div>
+    );
+  }
+
+  if (error) {
+    return (
+      <div className="min-h-screen bg-neutral-50 flex items-center justify-center">
+        <div className="text-center text-red-600">
+          <p className="font-bold mb-2">Failed to load data</p>
+          <p className="text-sm">{error}</p>
+          <button onClick={() => window.location.reload()} className="mt-4 px-4 py-2 bg-forest text-lime rounded-lg">Retry</button>
+        </div>
+      </div>
+    );
+  }
 
   const handleAnalyze = () => {
     if (!etfAId || !etfBId) return;
@@ -191,6 +232,7 @@ function App() {
                 selectedId={etfAId} 
                 onSelect={setEtfAId} 
                 excludeId={etfBId}
+                etfData={etfData}
               />
               
               <div className="flex justify-center -my-5 z-10 relative">
@@ -204,6 +246,7 @@ function App() {
                 selectedId={etfBId} 
                 onSelect={setEtfBId} 
                 excludeId={etfAId}
+                etfData={etfData}
               />
 
               <div className="pt-4">

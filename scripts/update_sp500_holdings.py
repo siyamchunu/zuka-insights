@@ -6,7 +6,7 @@ import os
 
 # Configuration
 IVV_CSV_URL = "https://www.ishares.com/us/products/239726/ishares-core-sp-500-etf/1467271812596.ajax?fileType=csv&fileName=IVV_holdings&dataType=fund"
-ETFS_JSON_PATH = os.path.join(os.path.dirname(__file__), "../src/data/etfs.json")
+ETFS_JSON_PATH = os.path.join(os.path.dirname(__file__), "../public/data/etfs.json")
 
 def download_ivv_holdings():
     print(f"Downloading IVV holdings from {IVV_CSV_URL}...")

@@ -1,8 +1,7 @@
 import React, { useState, useEffect, useRef } from 'react';
 import { Search, X, Check, ArrowRight } from 'lucide-react';
-import etfData from '../data/etfs.json';
 
-const ETFSearch = ({ label, selectedId, onSelect, excludeId }) => {
+const ETFSearch = ({ label, selectedId, onSelect, excludeId, etfData }) => {
   const [query, setQuery] = useState('');
   const [isOpen, setIsOpen] = useState(false);
   const wrapperRef = useRef(null);
