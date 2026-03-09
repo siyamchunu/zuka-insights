@@ -2,7 +2,7 @@ import React, { useState, useEffect, useRef } from 'react';
 import { Search, X, Check, ArrowRight } from 'lucide-react';
 import etfData from '../data/etfs.json';
 
-const ETFSearch = ({ label, selectedId, onSelect }) => {
+const ETFSearch = ({ label, selectedId, onSelect, excludeId }) => {
   const [query, setQuery] = useState('');
   const [isOpen, setIsOpen] = useState(false);
   const wrapperRef = useRef(null);
@@ -29,8 +29,9 @@ const ETFSearch = ({ label, selectedId, onSelect }) => {
   const selectedETF = etfData.find(e => e.id === selectedId);
 
   const filteredETFs = etfData.filter(etf => 
-    etf.name.toLowerCase().includes(query.toLowerCase()) || 
-    etf.id.toLowerCase().includes(query.toLowerCase())
+    etf.id !== excludeId &&
+    (etf.name.toLowerCase().includes(query.toLowerCase()) || 
+    etf.id.toLowerCase().includes(query.toLowerCase()))
   );
 
   const handleSelect = (id) => {

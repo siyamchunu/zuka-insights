@@ -210,7 +210,8 @@
         "weight": 0.63
       }
     ],
-    "is_tfsa_eligible": true
+    "is_tfsa_eligible": true,
+    "market": "JSE"
   },
   {
     "id": "STXBAL",
@@ -515,7 +516,8 @@
     ],
     "is_tfsa_eligible": true,
     "notes": "Balanced fund \u2014 holdings show equity portion only (~32%). Remaining allocation is bonds/cash.",
-    "equity_weight_pct": 31.87
+    "equity_weight_pct": 31.87,
+    "market": "JSE"
   },
   {
     "id": "STXGLB",
@@ -558,7 +560,8 @@
         "weight": 5.09
       }
     ],
-    "is_tfsa_eligible": true
+    "is_tfsa_eligible": true,
+    "market": "Global"
   },
   {
     "id": "STXCAP",
@@ -1136,7 +1139,8 @@
         "weight": 0.53
       }
     ],
-    "is_tfsa_eligible": true
+    "is_tfsa_eligible": true,
+    "market": "JSE"
   },
   {
     "id": "STXALS",
@@ -1714,7 +1718,8 @@
         "weight": 0.53
       }
     ],
-    "is_tfsa_eligible": true
+    "is_tfsa_eligible": true,
+    "market": "JSE"
   },
   {
     "id": "STX500",
@@ -4741,7 +4746,8 @@
       }
     ],
     "is_tfsa_eligible": true,
-    "hold_count": 503
+    "hold_count": 503,
+    "market": "US"
   },
   {
     "id": "STXNDQ",
@@ -4749,512 +4755,513 @@
     "provider": "Satrix",
     "holdings": [
       {
-        "ticker": "2000019",
-        "name": "AMAZON COM INC",
-        "weight": 4.56
-      },
-      {
-        "ticker": "2007849",
-        "name": "ADVANCED MICRO DEVICES INC",
-        "weight": 1.75
-      },
-      {
-        "ticker": "2008154",
-        "name": "ADOBE INC",
-        "weight": 0.63
-      },
-      {
-        "ticker": "2020459",
-        "name": "HONEYWELL INTERNATIONAL INC",
-        "weight": 0.81
-      },
-      {
-        "ticker": "2023607",
-        "name": "AMGEN INC",
-        "weight": 1.06
-      },
-      {
-        "ticker": "2026242",
-        "name": "AMERICAN ELECTRIC POWER INC",
-        "weight": 0.38
-      },
-      {
-        "ticker": "2032067",
-        "name": "ANALOG DEVICES INC",
-        "weight": 0.87
-      },
-      {
-        "ticker": "2044545",
-        "name": "COMCAST CORP CLASS A",
-        "weight": 0.61
-      },
-      {
-        "ticker": "2046251",
-        "name": "APPLE INC",
-        "weight": 7.48
-      },
-      {
-        "ticker": "2046552",
-        "name": "APPLIED MATERIAL INC",
-        "weight": 1.48
-      },
-      {
-        "ticker": "2065159",
-        "name": "AUTODESK INC",
-        "weight": 0.3
-      },
-      {
-        "ticker": "2065308",
-        "name": "AUTOMATIC DATA PROCESSING INC",
-        "weight": 0.48
-      },
-      {
-        "ticker": "2122117",
-        "name": "TAKE TWO INTERACTIVE SOFTWARE INC",
-        "weight": 0.21
-      },
-      {
-        "ticker": "2160753",
-        "name": "CSX CORP",
-        "weight": 0.41
-      },
-      {
-        "ticker": "2197137",
-        "name": "CINTAS CORP",
-        "weight": 0.44
-      },
-      {
-        "ticker": "2198163",
-        "name": "CISCO SYSTEMS INC",
-        "weight": 1.69
-      },
-      {
-        "ticker": "2208073",
-        "name": "COPART INC",
-        "weight": 0.2
-      },
-      {
-        "ticker": "2210614",
-        "name": "MARRIOTT INTERNATIONAL INC CLASS A",
-        "weight": 0.48
-      },
-      {
-        "ticker": "2257019",
-        "name": "COGNIZANT TECHNOLOGY SOLUTIONS COR",
-        "weight": 0.17
-      },
-      {
-        "ticker": "2262864",
-        "name": "COSTAR GROUP INC",
-        "weight": 0.11
-      },
-      {
-        "ticker": "2302232",
-        "name": "CADENCE DESIGN SYSTEMS INC",
-        "weight": 0.44
-      },
-      {
-        "ticker": "2310194",
-        "name": "ELECTRONIC ARTS INC",
-        "weight": 0.27
-      },
-      {
-        "ticker": "2332262",
-        "name": "FASTENAL",
-        "weight": 0.29
-      },
-      {
-        "ticker": "2369174",
-        "name": "GILEAD SCIENCES INC",
-        "weight": 0.97
-      },
-      {
-        "ticker": "2379504",
+        "ticker": "NVDA",
         "name": "NVIDIA CORP",
         "weight": 8.67
       },
       {
-        "ticker": "2459020",
-        "name": "INTUIT INC",
-        "weight": 0.7
+        "ticker": "AAPL",
+        "name": "APPLE INC",
+        "weight": 7.48
       },
       {
-        "ticker": "2459202",
-        "name": "IDEXX LABORATORIES INC",
-        "weight": 0.27
-      },
-      {
-        "ticker": "2463247",
-        "name": "INTEL CORPORATION CORP",
-        "weight": 1.18
-      },
-      {
-        "ticker": "2480138",
-        "name": "KLA CORP",
-        "weight": 1.01
-      },
-      {
-        "ticker": "2588173",
+        "ticker": "MSFT",
         "name": "MICROSOFT CORP",
         "weight": 5.94
       },
       {
-        "ticker": "2588184",
-        "name": "MICRON TECHNOLOGY INC",
-        "weight": 2.4
+        "ticker": "AMZN",
+        "name": "AMAZON COM INC",
+        "weight": 4.56
       },
       {
-        "ticker": "2592174",
-        "name": "MICROCHIP TECHNOLOGY INC",
-        "weight": 0.2
-      },
-      {
-        "ticker": "2614487",
-        "name": "INSMED",
-        "weight": 0.17
-      },
-      {
-        "ticker": "2614807",
-        "name": "XCEL ENERGY INC",
-        "weight": 0.26
-      },
-      {
-        "ticker": "2656423",
-        "name": "OLD DOMINION FREIGHT LINE INC",
-        "weight": 0.24
-      },
-      {
-        "ticker": "2665861",
-        "name": "PACCAR INC",
-        "weight": 0.34
-      },
-      {
-        "ticker": "2670519",
-        "name": "EXELON CORP",
-        "weight": 0.27
-      },
-      {
-        "ticker": "2674458",
-        "name": "PAYCHEX INC",
-        "weight": 0.19
-      },
-      {
-        "ticker": "2681511",
-        "name": "PEPSICO INC",
-        "weight": 1.18
-      },
-      {
-        "ticker": "2701271",
-        "name": "COSTCO WHOLESALE CORP",
-        "weight": 2.34
-      },
-      {
-        "ticker": "2714923",
-        "name": "QUALCOMM INC",
-        "weight": 0.79
-      },
-      {
-        "ticker": "2730190",
-        "name": "REGENERON PHARMACEUTICALS INC",
-        "weight": 0.43
-      },
-      {
-        "ticker": "2746711",
-        "name": "ROSS STORES INC",
-        "weight": 0.38
-      },
-      {
-        "ticker": "2749602",
-        "name": "ROPER TECHNOLOGIES INC",
-        "weight": 0.21
-      },
-      {
-        "ticker": "2842255",
-        "name": "STARBUCKS CORP",
-        "weight": 0.6
-      },
-      {
-        "ticker": "2857817",
-        "name": "NETFLIX INC",
-        "weight": 2.26
-      },
-      {
-        "ticker": "2867719",
-        "name": "SYNOPSYS INC",
-        "weight": 0.44
-      },
-      {
-        "ticker": "2871301",
-        "name": "INTUITIVE SURGICAL INC",
-        "weight": 0.95
-      },
-      {
-        "ticker": "2885409",
-        "name": "TEXAS INSTRUMENT INC",
-        "weight": 0.97
-      },
-      {
-        "ticker": "2931034",
-        "name": "VERTEX PHARMACEUTICALS INC",
-        "weight": 0.63
-      },
-      {
-        "ticker": "2936921",
-        "name": "WALMART INC",
-        "weight": 3.24
-      },
-      {
-        "ticker": "2954699",
-        "name": "WESTERN DIGITAL CORP",
-        "weight": 0.47
-      },
-      {
-        "ticker": "2974329",
-        "name": "MICROSTRATEGY INC CLASS A",
-        "weight": 0.2
-      },
-      {
-        "ticker": "B00FWN1",
-        "name": "ALNYLAM PHARMACEUTICALS INC",
-        "weight": 0.23
-      },
-      {
-        "ticker": "B01Z7J1",
-        "name": "MONOLITHIC POWER SYSTEMS INC",
-        "weight": 0.28
-      },
-      {
-        "ticker": "B0796X4",
-        "name": "DEXCOM INC",
-        "weight": 0.15
-      },
-      {
-        "ticker": "B23X1H3",
-        "name": "MERCADOLIBRE INC",
-        "weight": 0.48
-      },
-      {
-        "ticker": "B4P9W92",
-        "name": "VERISK ANALYTICS INC",
-        "weight": 0.16
-      },
-      {
-        "ticker": "B505PN7",
-        "name": "NXP SEMICONDUCTORS NV",
-        "weight": 0.29
-      },
-      {
-        "ticker": "B5B2106",
-        "name": "FORTINET INC",
-        "weight": 0.34
-      },
-      {
-        "ticker": "B616C79",
+        "ticker": "TSLA",
         "name": "TESLA INC",
         "weight": 3.94
       },
       {
-        "ticker": "B65LWX6",
-        "name": "OREILLY AUTOMOTIVE INC",
-        "weight": 0.42
-      },
-      {
-        "ticker": "B7TL820",
+        "ticker": "META",
         "name": "META PLATFORMS INC CLASS A",
         "weight": 3.78
       },
       {
-        "ticker": "B7Y8YR3",
-        "name": "DIAMONDBACK ENERGY INC",
-        "weight": 0.28
-      },
-      {
-        "ticker": "B87ZMX0",
-        "name": "PALO ALTO NETWORKS INC",
-        "weight": 0.71
-      },
-      {
-        "ticker": "B8CKK03",
-        "name": "MONDELEZ INTERNATIONAL INC CLASS A",
-        "weight": 0.4
-      },
-      {
-        "ticker": "B8K6ZD1",
-        "name": "WORKDAY INC CLASS A",
-        "weight": 0.17
-      },
-      {
-        "ticker": "B908F01",
-        "name": "ASML HOLDING ADR REPRESENTING NV",
-        "weight": 0.64
-      },
-      {
-        "ticker": "B94Q9V0",
-        "name": "T MOBILE US INC",
-        "weight": 1.32
-      },
-      {
-        "ticker": "BD3W133",
-        "name": "KEURIG DR PEPPER INC",
-        "weight": 0.21
-      },
-      {
-        "ticker": "BDHLTQ5",
-        "name": "BAKER HUGHES CLASS A",
-        "weight": 0.32
-      },
-      {
-        "ticker": "BDRXDB4",
-        "name": "BOOKING HOLDINGS INC",
-        "weight": 0.8
-      },
-      {
-        "ticker": "BDT5S35",
-        "name": "AXON ENTERPRISE INC",
-        "weight": 0.24
-      },
-      {
-        "ticker": "BDZ78H9",
-        "name": "BROADCOM INC",
-        "weight": 3.06
-      },
-      {
-        "ticker": "BJJP138",
-        "name": "CROWDSTRIKE HOLDINGS INC CLASS A",
-        "weight": 0.57
-      },
-      {
-        "ticker": "BKT9Y49",
-        "name": "DATADOG INC CLASS A",
-        "weight": 0.22
-      },
-      {
-        "ticker": "BKVD2N4",
-        "name": "SEAGATE TECHNOLOGY HOLDINGS PLC",
-        "weight": 0.42
-      },
-      {
-        "ticker": "BL6JPG8",
-        "name": "GE HEALTHCARE TECHNOLOGIES INC",
-        "weight": 0.19
-      },
-      {
-        "ticker": "BM8JYX3",
-        "name": "WARNER BROS. DISCOVERY INC SERIES",
-        "weight": 0.38
-      },
-      {
-        "ticker": "BMGYYH4",
-        "name": "AIRBNB INC CLASS A",
-        "weight": 0.31
-      },
-      {
-        "ticker": "BMH4FS1",
-        "name": "CONSTELLATION ENERGY CORP",
-        "weight": 0.65
-      },
-      {
-        "ticker": "BMV3LG4",
-        "name": "APPLOVIN CORP CLASS A",
-        "weight": 0.84
-      },
-      {
-        "ticker": "BN13P03",
-        "name": "DOORDASH INC CLASS A",
-        "weight": 0.4
-      },
-      {
-        "ticker": "BN78DQ4",
-        "name": "PALANTIR TECHNOLOGIES INC CLASS A",
-        "weight": 1.87
-      },
-      {
-        "ticker": "BNBXPB4",
-        "name": "THOMSON REUTERS CORP",
-        "weight": 0.26
-      },
-      {
-        "ticker": "BNKJSM5",
-        "name": "MARVELL TECHNOLOGY INC",
-        "weight": 0.35
-      },
-      {
-        "ticker": "BNSP5P7",
-        "name": "ARM HOLDINGS AMERICAN DEPOSITARY S",
-        "weight": 0.09
-      },
-      {
-        "ticker": "BNZHB81",
-        "name": "LINDE PLC",
-        "weight": 1.23
-      },
-      {
-        "ticker": "BQ1PC76",
-        "name": "ATLASSIAN CORP CLASS A",
-        "weight": 0.07
-      },
-      {
-        "ticker": "BQBDNK0",
-        "name": "FERROVIAL SE OS",
-        "weight": 0.27
-      },
-      {
-        "ticker": "BSML4N7",
-        "name": "LAM RESEARCH CORP",
-        "weight": 1.45
-      },
-      {
-        "ticker": "BXDZ9Z0",
-        "name": "SHOPIFY SUBORDINATE VOTING INC CLA",
-        "weight": 0.88
-      },
-      {
-        "ticker": "BYQQ3P5",
-        "name": "COCA COLA EUROPACIFIC PARTNERS PLC",
-        "weight": 0.25
-      },
-      {
-        "ticker": "BYRY499",
-        "name": "KRAFT HEINZ",
-        "weight": 0.16
-      },
-      {
-        "ticker": "BYVW0F7",
-        "name": "PDD HOLDINGS ADS INC",
-        "weight": 0.36
-      },
-      {
-        "ticker": "BYVY8G0",
+        "ticker": "GOOGL",
         "name": "ALPHABET INC CLASS A",
         "weight": 3.4
       },
       {
-        "ticker": "BYW36M8",
-        "name": "PAYPAL HOLDINGS INC",
-        "weight": 0.24
+        "ticker": "WMT",
+        "name": "WALMART INC",
+        "weight": 3.24
       },
       {
-        "ticker": "BYY88Y7",
+        "ticker": "GOOG",
         "name": "ALPHABET INC CLASS C",
         "weight": 3.17
       },
       {
-        "ticker": "BZ00V34",
-        "name": "ZSCALER INC",
-        "weight": 0.14
+        "ticker": "AVGO",
+        "name": "BROADCOM INC",
+        "weight": 3.06
       },
       {
-        "ticker": "BZ07BW4",
+        "ticker": "MU",
+        "name": "MICRON TECHNOLOGY INC",
+        "weight": 2.4
+      },
+      {
+        "ticker": "COST",
+        "name": "COSTCO WHOLESALE CORP",
+        "weight": 2.34
+      },
+      {
+        "ticker": "NFLX",
+        "name": "NETFLIX INC",
+        "weight": 2.26
+      },
+      {
+        "ticker": "PLTR",
+        "name": "PALANTIR TECHNOLOGIES INC CLASS A",
+        "weight": 1.87
+      },
+      {
+        "ticker": "AMD",
+        "name": "ADVANCED MICRO DEVICES INC",
+        "weight": 1.75
+      },
+      {
+        "ticker": "CSCO",
+        "name": "CISCO SYSTEMS INC",
+        "weight": 1.69
+      },
+      {
+        "ticker": "AMAT",
+        "name": "APPLIED MATERIAL INC",
+        "weight": 1.48
+      },
+      {
+        "ticker": "LRCX",
+        "name": "LAM RESEARCH CORP",
+        "weight": 1.45
+      },
+      {
+        "ticker": "TMUS",
+        "name": "T MOBILE US INC",
+        "weight": 1.32
+      },
+      {
+        "ticker": "LIN",
+        "name": "LINDE PLC",
+        "weight": 1.23
+      },
+      {
+        "ticker": "INTC",
+        "name": "INTEL CORPORATION CORP",
+        "weight": 1.18
+      },
+      {
+        "ticker": "PEP",
+        "name": "PEPSICO INC",
+        "weight": 1.18
+      },
+      {
+        "ticker": "AMGN",
+        "name": "AMGEN INC",
+        "weight": 1.06
+      },
+      {
+        "ticker": "KLAC",
+        "name": "KLA CORP",
+        "weight": 1.01
+      },
+      {
+        "ticker": "GILD",
+        "name": "GILEAD SCIENCES INC",
+        "weight": 0.97
+      },
+      {
+        "ticker": "TXN",
+        "name": "TEXAS INSTRUMENT INC",
+        "weight": 0.97
+      },
+      {
+        "ticker": "ISRG",
+        "name": "INTUITIVE SURGICAL INC",
+        "weight": 0.95
+      },
+      {
+        "ticker": "SHOP",
+        "name": "SHOPIFY SUBORDINATE VOTING INC CLA",
+        "weight": 0.88
+      },
+      {
+        "ticker": "ADI",
+        "name": "ANALOG DEVICES INC",
+        "weight": 0.87
+      },
+      {
+        "ticker": "APP",
+        "name": "APPLOVIN CORP CLASS A",
+        "weight": 0.84
+      },
+      {
+        "ticker": "HON",
+        "name": "HONEYWELL INTERNATIONAL INC",
+        "weight": 0.81
+      },
+      {
+        "ticker": "BKNG",
+        "name": "BOOKING HOLDINGS INC",
+        "weight": 0.8
+      },
+      {
+        "ticker": "QCOM",
+        "name": "QUALCOMM INC",
+        "weight": 0.79
+      },
+      {
+        "ticker": "PANW",
+        "name": "PALO ALTO NETWORKS INC",
+        "weight": 0.71
+      },
+      {
+        "ticker": "INTU",
+        "name": "INTUIT INC",
+        "weight": 0.7
+      },
+      {
+        "ticker": "CEG",
+        "name": "CONSTELLATION ENERGY CORP",
+        "weight": 0.65
+      },
+      {
+        "ticker": "ASML",
+        "name": "ASML HOLDING ADR REPRESENTING NV",
+        "weight": 0.64
+      },
+      {
+        "ticker": "ADBE",
+        "name": "ADOBE INC",
+        "weight": 0.63
+      },
+      {
+        "ticker": "VRTX",
+        "name": "VERTEX PHARMACEUTICALS INC",
+        "weight": 0.63
+      },
+      {
+        "ticker": "CMCSA",
+        "name": "COMCAST CORP CLASS A",
+        "weight": 0.61
+      },
+      {
+        "ticker": "SBUX",
+        "name": "STARBUCKS CORP",
+        "weight": 0.6
+      },
+      {
+        "ticker": "CRWD",
+        "name": "CROWDSTRIKE HOLDINGS INC CLASS A",
+        "weight": 0.57
+      },
+      {
+        "ticker": "ADP",
+        "name": "AUTOMATIC DATA PROCESSING INC",
+        "weight": 0.48
+      },
+      {
+        "ticker": "MAR",
+        "name": "MARRIOTT INTERNATIONAL INC CLASS A",
+        "weight": 0.48
+      },
+      {
+        "ticker": "MELI",
+        "name": "MERCADOLIBRE INC",
+        "weight": 0.48
+      },
+      {
+        "ticker": "WDC",
+        "name": "WESTERN DIGITAL CORP",
+        "weight": 0.47
+      },
+      {
+        "ticker": "CTAS",
+        "name": "CINTAS CORP",
+        "weight": 0.44
+      },
+      {
+        "ticker": "CDNS",
+        "name": "CADENCE DESIGN SYSTEMS INC",
+        "weight": 0.44
+      },
+      {
+        "ticker": "SNPS",
+        "name": "SYNOPSYS INC",
+        "weight": 0.44
+      },
+      {
+        "ticker": "REGN",
+        "name": "REGENERON PHARMACEUTICALS INC",
+        "weight": 0.43
+      },
+      {
+        "ticker": "ORLY",
+        "name": "OREILLY AUTOMOTIVE INC",
+        "weight": 0.42
+      },
+      {
+        "ticker": "STX",
+        "name": "SEAGATE TECHNOLOGY HOLDINGS PLC",
+        "weight": 0.42
+      },
+      {
+        "ticker": "CSX",
+        "name": "CSX CORP",
+        "weight": 0.41
+      },
+      {
+        "ticker": "MNST",
         "name": "MONSTER BEVERAGE CORP",
         "weight": 0.41
       },
       {
-        "ticker": "BZ6VT82",
+        "ticker": "MDLZ",
+        "name": "MONDELEZ INTERNATIONAL INC CLASS A",
+        "weight": 0.4
+      },
+      {
+        "ticker": "DASH",
+        "name": "DOORDASH INC CLASS A",
+        "weight": 0.4
+      },
+      {
+        "ticker": "AEP",
+        "name": "AMERICAN ELECTRIC POWER INC",
+        "weight": 0.38
+      },
+      {
+        "ticker": "ROST",
+        "name": "ROSS STORES INC",
+        "weight": 0.38
+      },
+      {
+        "ticker": "WBD",
+        "name": "WARNER BROS. DISCOVERY INC SERIES",
+        "weight": 0.38
+      },
+      {
+        "ticker": "PDD",
+        "name": "PDD HOLDINGS ADS INC",
+        "weight": 0.36
+      },
+      {
+        "ticker": "MRVL",
+        "name": "MARVELL TECHNOLOGY INC",
+        "weight": 0.35
+      },
+      {
+        "ticker": "PCAR",
+        "name": "PACCAR INC",
+        "weight": 0.34
+      },
+      {
+        "ticker": "FTNT",
+        "name": "FORTINET INC",
+        "weight": 0.34
+      },
+      {
+        "ticker": "BKR",
+        "name": "BAKER HUGHES CLASS A",
+        "weight": 0.32
+      },
+      {
+        "ticker": "ABNB",
+        "name": "AIRBNB INC CLASS A",
+        "weight": 0.31
+      },
+      {
+        "ticker": "ADSK",
+        "name": "AUTODESK INC",
+        "weight": 0.3
+      },
+      {
+        "ticker": "FAST",
+        "name": "FASTENAL",
+        "weight": 0.29
+      },
+      {
+        "ticker": "NXPI",
+        "name": "NXP SEMICONDUCTORS NV",
+        "weight": 0.29
+      },
+      {
+        "ticker": "MPWR",
+        "name": "MONOLITHIC POWER SYSTEMS INC",
+        "weight": 0.28
+      },
+      {
+        "ticker": "FANG",
+        "name": "DIAMONDBACK ENERGY INC",
+        "weight": 0.28
+      },
+      {
+        "ticker": "EA",
+        "name": "ELECTRONIC ARTS INC",
+        "weight": 0.27
+      },
+      {
+        "ticker": "IDXX",
+        "name": "IDEXX LABORATORIES INC",
+        "weight": 0.27
+      },
+      {
+        "ticker": "EXC",
+        "name": "EXELON CORP",
+        "weight": 0.27
+      },
+      {
+        "ticker": "FER",
+        "name": "FERROVIAL SE OS",
+        "weight": 0.27
+      },
+      {
+        "ticker": "XEL",
+        "name": "XCEL ENERGY INC",
+        "weight": 0.26
+      },
+      {
+        "ticker": "TRI",
+        "name": "THOMSON REUTERS CORP",
+        "weight": 0.26
+      },
+      {
+        "ticker": "CCEP",
+        "name": "COCA COLA EUROPACIFIC PARTNERS PLC",
+        "weight": 0.25
+      },
+      {
+        "ticker": "ODFL",
+        "name": "OLD DOMINION FREIGHT LINE INC",
+        "weight": 0.24
+      },
+      {
+        "ticker": "AXON",
+        "name": "AXON ENTERPRISE INC",
+        "weight": 0.24
+      },
+      {
+        "ticker": "PYPL",
+        "name": "PAYPAL HOLDINGS INC",
+        "weight": 0.24
+      },
+      {
+        "ticker": "ALNY",
+        "name": "ALNYLAM PHARMACEUTICALS INC",
+        "weight": 0.23
+      },
+      {
+        "ticker": "DDOG",
+        "name": "DATADOG INC CLASS A",
+        "weight": 0.22
+      },
+      {
+        "ticker": "TTWO",
+        "name": "TAKE TWO INTERACTIVE SOFTWARE INC",
+        "weight": 0.21
+      },
+      {
+        "ticker": "ROP",
+        "name": "ROPER TECHNOLOGIES INC",
+        "weight": 0.21
+      },
+      {
+        "ticker": "KDP",
+        "name": "KEURIG DR PEPPER INC",
+        "weight": 0.21
+      },
+      {
+        "ticker": "CPRT",
+        "name": "COPART INC",
+        "weight": 0.2
+      },
+      {
+        "ticker": "MCHP",
+        "name": "MICROCHIP TECHNOLOGY INC",
+        "weight": 0.2
+      },
+      {
+        "ticker": "MSTR",
+        "name": "MICROSTRATEGY INC CLASS A",
+        "weight": 0.2
+      },
+      {
+        "ticker": "PAYX",
+        "name": "PAYCHEX INC",
+        "weight": 0.19
+      },
+      {
+        "ticker": "GEHC",
+        "name": "GE HEALTHCARE TECHNOLOGIES INC",
+        "weight": 0.19
+      },
+      {
+        "ticker": "CTSH",
+        "name": "COGNIZANT TECHNOLOGY SOLUTIONS COR",
+        "weight": 0.17
+      },
+      {
+        "ticker": "INSM",
+        "name": "INSMED",
+        "weight": 0.17
+      },
+      {
+        "ticker": "WDAY",
+        "name": "WORKDAY INC CLASS A",
+        "weight": 0.17
+      },
+      {
+        "ticker": "VRSK",
+        "name": "VERISK ANALYTICS INC",
+        "weight": 0.16
+      },
+      {
+        "ticker": "KHC",
+        "name": "KRAFT HEINZ",
+        "weight": 0.16
+      },
+      {
+        "ticker": "CHTR",
         "name": "CHARTER COMMUNICATIONS INC CLASS A",
         "weight": 0.16
+      },
+      {
+        "ticker": "DXCM",
+        "name": "DEXCOM INC",
+        "weight": 0.15
+      },
+      {
+        "ticker": "ZS",
+        "name": "ZSCALER INC",
+        "weight": 0.14
+      },
+      {
+        "ticker": "CSGP",
+        "name": "COSTAR GROUP INC",
+        "weight": 0.11
+      },
+      {
+        "ticker": "ARM",
+        "name": "ARM HOLDINGS AMERICAN DEPOSITARY S",
+        "weight": 0.09
+      },
+      {
+        "ticker": "TEAM",
+        "name": "ATLASSIAN CORP CLASS A",
+        "weight": 0.07
       }
     ],
-    "is_tfsa_eligible": true
+    "is_tfsa_eligible": true,
+    "market": "US"
   },
   {
     "id": "STXMMT",
@@ -5422,7 +5429,8 @@
       }
     ],
     "is_tfsa_eligible": true,
-    "provider": "Satrix"
+    "provider": "Satrix",
+    "market": "JSE"
   },
   {
     "id": "STXID",
@@ -5570,7 +5578,8 @@
       }
     ],
     "is_tfsa_eligible": true,
-    "provider": "Satrix"
+    "provider": "Satrix",
+    "market": "JSE"
   },
   {
     "id": "CSP500",
@@ -8607,6 +8616,7 @@
       "Utilities": 2.2,
       "Basic Materials": 1.4
     },
-    "hold_count": 503
+    "hold_count": 503,
+    "market": "US"
   }
 ]

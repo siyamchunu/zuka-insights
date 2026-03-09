@@ -60,40 +60,55 @@ function App() {
           .sort((a, b) => b.weight - a.weight);
       };
 
+      // C2: Cross-market guard — only compute overlap for same-market ETFs
+      const isCrossMarket = etfA.market && etfB.market && etfA.market !== etfB.market;
+
       const mapA = getAggregatedMap(etfA.holdings);
       const mapB = getAggregatedMap(etfB.holdings);
       
       let overlapScore = 0;
       const sharedHoldings = [];
 
-      // Iterate through unique tickers from both
-      const allTickers = new Set([...mapA.keys(), ...mapB.keys()]);
+      if (!isCrossMarket) {
+        // Iterate through unique tickers from both
+        const allTickers = new Set([...mapA.keys(), ...mapB.keys()]);
 
-      allTickers.forEach(ticker => {
-        const weightA = mapA.get(ticker) || 0;
-        const weightB = mapB.get(ticker) || 0;
-        
-        // Overlap is the intersection (minimum weight held in both)
-        const overlap = Math.min(weightA, weightB);
-        
-        if (overlap > 0) {
-          overlapScore += overlap;
-          const findName = (holdings, tick) => {
-            const h = holdings.find(h => (h.ticker || '').trim().toUpperCase() === tick);
-            return h ? (h.name || tick) : tick;
-          };
-          sharedHoldings.push({
-            ticker,
-            name: findName(etfA.holdings, ticker) || findName(etfB.holdings, ticker),
-            weightA: parseFloat(weightA.toFixed(2)),
-            weightB: parseFloat(weightB.toFixed(2)),
-            overlap: parseFloat(overlap.toFixed(2))
-          });
+        allTickers.forEach(ticker => {
+          const weightA = mapA.get(ticker) || 0;
+          const weightB = mapB.get(ticker) || 0;
+          
+          // Overlap is the intersection (minimum weight held in both)
+          const overlap = Math.min(weightA, weightB);
+          
+          if (overlap > 0) {
+            overlapScore += overlap;
+            const findName = (holdings, tick) => {
+              const h = holdings.find(h => (h.ticker || '').trim().toUpperCase() === tick);
+              return h ? (h.name || tick) : tick;
+            };
+            sharedHoldings.push({
+              ticker,
+              name: findName(etfA.holdings, ticker) || findName(etfB.holdings, ticker),
+              weightA: parseFloat(weightA.toFixed(2)),
+              weightB: parseFloat(weightB.toFixed(2)),
+              overlap: parseFloat(overlap.toFixed(2))
+            });
+          }
+        });
+
+        // Sort shared holdings by overlap weight desc
+        sharedHoldings.sort((a, b) => b.overlap - a.overlap);
+      }
+
+      // H1: Detect balanced fund involvement for warning
+      const balancedWarnings = [];
+      [etfA, etfB].forEach(etf => {
+        if (etf.equity_weight_pct) {
+          balancedWarnings.push(
+            `${etf.name} is a balanced fund — overlap shown is relative to equity portion only (~${etf.equity_weight_pct}% of total fund).`
+          );
         }
       });
-
-      // Sort shared holdings by overlap weight desc
-      sharedHoldings.sort((a, b) => b.overlap - a.overlap);
 
       setResult({
         score: overlapScore.toFixed(1),
@@ -104,6 +119,10 @@ function App() {
         countB: etfB.holdings.length,
         sectorA: getSectorBreakdown(etfA.holdings),
         sectorB: getSectorBreakdown(etfB.holdings),
+        isCrossMarket,
+        marketA: etfA.market,
+        marketB: etfB.market,
+        balancedWarnings,
       });
       
       setIsAnalyzing(false);
@@ -169,6 +188,7 @@ function App() {
                 label="First ETF" 
                 selectedId={etfAId} 
                 onSelect={setEtfAId} 
+                excludeId={etfBId}
               />
               
               <div className="flex justify-center -my-5 z-10 relative">
@@ -181,6 +201,7 @@ function App() {
                 label="Second ETF" 
                 selectedId={etfBId} 
                 onSelect={setEtfBId} 
+                excludeId={etfAId}
               />
 
               <div className="pt-4">
@@ -229,7 +250,35 @@ function App() {
               </div>
             ) : (
               <div className="animate-in fade-in slide-in-from-bottom-8 duration-700 space-y-8">
-                
+
+                {/* C2: Cross-market warning banner */}
+                {result.isCrossMarket && (
+                  <div className="flex items-start gap-4 bg-amber-50 border-2 border-amber-200 rounded-2xl p-6">
+                    <AlertTriangle size={24} className="text-amber-600 shrink-0 mt-0.5" />
+                    <div>
+                      <h3 className="font-bold text-amber-900 mb-1">Cross-market comparison not supported</h3>
+                      <p className="text-amber-800 text-sm leading-relaxed">
+                        These ETFs hold assets from different markets ({result.marketA} vs {result.marketB}).
+                        Tickers may represent different companies — e.g. JSE ticker SPG (Super Group) vs
+                        US ticker SPG (Simon Property Group). Overlap analysis is disabled for accuracy.
+                      </p>
+                    </div>
+                  </div>
+                )}
+
+                {/* H1: Balanced fund warning */}
+                {result.balancedWarnings.length > 0 && (
+                  <div className="flex items-start gap-4 bg-blue-50 border-2 border-blue-200 rounded-2xl p-6">
+                    <Info size={24} className="text-blue-600 shrink-0 mt-0.5" />
+                    <div>
+                      <h3 className="font-bold text-blue-900 mb-1">Balanced Fund Notice</h3>
+                      {result.balancedWarnings.map((msg, i) => (
+                        <p key={i} className="text-blue-800 text-sm leading-relaxed">{msg}</p>
+                      ))}
+                    </div>
+                  </div>
+                )}
+
                 {/* Summary Card */}
                 <div className="bg-forest text-bone rounded-[2.5rem] p-8 md:p-12 relative overflow-hidden shadow-2xl shadow-forest/20">
                   {/* Decorative mesh gradient */}
@@ -243,10 +292,12 @@ function App() {
                       </div>
                       
                       <h2 className="text-4xl md:text-5xl font-bold text-white mb-2 tracking-tight">
-                        {result.score}% <span className="text-forest/50 text-2xl md:text-3xl ml-2">Overlap</span>
+                        {result.isCrossMarket ? 'N/A' : <>{result.score}%</>} <span className="text-forest/50 text-2xl md:text-3xl ml-2">Overlap</span>
                       </h2>
                       <p className="text-bone/60 mb-8 max-w-md">
-                        {result.score > 50 
+                        {result.isCrossMarket
+                            ? "Cross-market comparison — overlap score is not available."
+                            : result.score > 50 
                             ? "High concentration risk detected. These funds share significant underlying assets." 
                             : "Moderate to low overlap. These funds offer good diversification benefits."}
                       </p>
