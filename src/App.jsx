@@ -33,9 +33,8 @@ function App() {
       const getAggregatedMap = (holdings) => {
         const map = new Map();
         holdings.forEach(h => {
-          // Normalise both casing conventions: local SA uses lowercase, international uses PascalCase
-          const ticker = (h.ticker || h.Ticker || '').trim().toUpperCase();
-          const weight = h.weight ?? h.Weight ?? 0;
+          const ticker = (h.ticker || '').trim().toUpperCase();
+          const weight = h.weight ?? 0;
           if (!ticker) return;
           const currentWeight = map.get(ticker) || 0;
           map.set(ticker, currentWeight + parseFloat(weight));
@@ -48,10 +47,10 @@ function App() {
         const map = new Map();
         let hasSector = false;
         holdings.forEach(h => {
-          const sector = h.Sector || h.sector;
+          const sector = h.sector;
           if (sector) {
             hasSector = true;
-            const weight = parseFloat(h.Weight ?? h.weight ?? 0);
+            const weight = parseFloat(h.weight ?? 0);
             map.set(sector, (map.get(sector) || 0) + weight);
           }
         });
@@ -80,8 +79,8 @@ function App() {
         if (overlap > 0) {
           overlapScore += overlap;
           const findName = (holdings, tick) => {
-            const h = holdings.find(h => (h.ticker || h.Ticker || '').trim().toUpperCase() === tick);
-            return h ? (h.name || h.Name || tick) : tick;
+            const h = holdings.find(h => (h.ticker || '').trim().toUpperCase() === tick);
+            return h ? (h.name || tick) : tick;
           };
           sharedHoldings.push({
             ticker,
