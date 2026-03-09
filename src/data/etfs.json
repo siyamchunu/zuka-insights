@@ -58,44 +58,6 @@
     "is_tfsa_eligible": true
   },
   {
-    "id": "STXIND",
-    "name": "Satrix INDI 25 ETF (Mock)",
-    "provider": "Satrix",
-    "holdings": [
-      {
-        "ticker": "NPN",
-        "name": "NASPERS",
-        "weight": 25.4
-      },
-      {
-        "ticker": "PRX",
-        "name": "PROSUS",
-        "weight": 18.2
-      },
-      {
-        "ticker": "MTN",
-        "name": "MTN GROUP",
-        "weight": 4.5
-      },
-      {
-        "ticker": "VOD",
-        "name": "VODACOM GROUP",
-        "weight": 3.1
-      },
-      {
-        "ticker": "CLS",
-        "name": "CLICKS GROUP",
-        "weight": 2.8
-      },
-      {
-        "ticker": "MRP",
-        "name": "MR PRICE GROUP",
-        "weight": 1.9
-      }
-    ],
-    "is_tfsa_eligible": true
-  },
-  {
     "id": "STXBAL",
     "name": "Satrix Balanced Index Fund",
     "provider": "Satrix",
@@ -399,7 +361,7 @@
     "is_tfsa_eligible": true
   },
   {
-    "id": "STXGB",
+    "id": "STXGLB",
     "name": "Satrix Global Balanced FoF",
     "provider": "Satrix",
     "holdings": [
@@ -5138,168 +5100,168 @@
     "is_tfsa_eligible": true
   },
   {
-    "id": "STXMMM",
+    "id": "STXMMT",
     "name": "Satrix Momentum",
     "holdings": [
       {
         "ticker": "ABG",
         "name": "ABSA GROUP LTD",
-        "weight": 0.0524
+        "weight": 5.24
       },
       {
         "ticker": "AGL",
         "name": "ANGLO",
-        "weight": 0.016200000000000003
+        "weight": 1.62
       },
       {
         "ticker": "ANG",
         "name": "ANGLO GOLD ASHANTI",
-        "weight": 0.0951
+        "weight": 9.51
       },
       {
         "ticker": "BOX",
         "name": "Box Inc",
-        "weight": 0.0032
+        "weight": 0.32
       },
       {
         "ticker": "BTI",
         "name": "BRITISH AMERICAN TOBACCO PLC",
-        "weight": 0.030699999999999998
+        "weight": 3.07
       },
       {
         "ticker": "CFR",
         "name": "COMPAGNIE FINANCIERE",
-        "weight": 0.013500000000000002
+        "weight": 1.35
       },
       {
         "ticker": "CPI",
         "name": "CAPITEC",
-        "weight": 0.0709
+        "weight": 7.09
       },
       {
         "ticker": "DSY",
         "name": "DISCOVERY",
-        "weight": 0.0223
+        "weight": 2.23
       },
       {
         "ticker": "FSR",
         "name": "FIRSTRAND",
-        "weight": 0.024
+        "weight": 2.4
       },
       {
         "ticker": "GFI",
         "name": "GOLDFIELDS LTD",
-        "weight": 0.09939999999999999
+        "weight": 9.94
       },
       {
         "ticker": "GLN",
         "name": "GLENCORE PLC",
-        "weight": 0.013999999999999999
+        "weight": 1.4
       },
       {
         "ticker": "IMP",
         "name": "IMPLATS",
-        "weight": 0.024700000000000003
+        "weight": 2.47
       },
       {
         "ticker": "MTM",
         "name": "MTM MOMENTUM METROPOLITAN HOLDINGS LTD",
-        "weight": 0.0254
+        "weight": 2.54
       },
       {
         "ticker": "MTN",
         "name": "MTN GROUP",
-        "weight": 0.0721
+        "weight": 7.21
       },
       {
         "ticker": "N91",
         "name": "Ninety One Plc",
-        "weight": 0.008199999999999999
+        "weight": 0.82
       },
       {
         "ticker": "NPH",
         "name": "Northam Platinum Holdings",
-        "weight": 0.0341
+        "weight": 3.41
       },
       {
         "ticker": "NPN",
         "name": "NASPERS -N",
-        "weight": 0.0691
+        "weight": 6.91
       },
       {
         "ticker": "NTC",
         "name": "NETCARE",
-        "weight": 0.006500000000000001
+        "weight": 0.65
       },
       {
         "ticker": "NY1",
         "name": "Ninety One Limited",
-        "weight": 0.008199999999999999
+        "weight": 0.82
       },
       {
         "ticker": "PAN",
         "name": "PAN AFRICAN RESOURCE",
-        "weight": 0.0151
+        "weight": 1.51
       },
       {
         "ticker": "PPH",
         "name": "PEPKOR HOLDINGS LTD",
-        "weight": 0.0031
+        "weight": 0.31
       },
       {
         "ticker": "PRX",
         "name": "PROSUS NV",
-        "weight": 0.0246
+        "weight": 2.46
       },
       {
         "ticker": "QLT",
         "name": "QUILTER PLC",
-        "weight": 0.0051
+        "weight": 0.51
       },
       {
         "ticker": "REM",
         "name": "REMGRO",
-        "weight": 0.0369
+        "weight": 3.69
       },
       {
         "ticker": "SBK",
         "name": "STANBANK",
-        "weight": 0.0409
+        "weight": 4.09
       },
       {
         "ticker": "SHP",
         "name": "SHOPRITE",
-        "weight": 0.0070999999999999995
+        "weight": 0.71
       },
       {
         "ticker": "SLM",
         "name": "SANLAM",
-        "weight": 0.028999999999999998
+        "weight": 2.9
       },
       {
         "ticker": "SOL",
         "name": "SASOL",
-        "weight": 0.006
+        "weight": 0.6
       },
       {
         "ticker": "SSW",
         "name": "Sibanye Stillwater Ltd",
-        "weight": 0.045
+        "weight": 4.5
       },
       {
         "ticker": "TBS",
         "name": "TIGBRANDS",
-        "weight": 0.0318
+        "weight": 3.18
       },
       {
         "ticker": "VAL",
         "name": "Valterra Platinum Ltd",
-        "weight": 0.0412
+        "weight": 4.12
       },
       {
         "ticker": "VOD",
         "name": "VODACOM GROUP LIMITED",
-        "weight": 0.024300000000000002
+        "weight": 2.43
       }
     ],
     "is_tfsa_eligible": true
@@ -5311,148 +5273,148 @@
       {
         "ticker": "ABG",
         "name": "ABSA GROUP LTD",
-        "weight": 0.09369999999999999
+        "weight": 9.37
       },
       {
         "ticker": "AFE",
         "name": "AECI",
-        "weight": 0.008
+        "weight": 0.8
       },
       {
         "ticker": "ATT",
         "name": "ATTACQ",
-        "weight": 0.0024
+        "weight": 0.24
       },
       {
         "ticker": "BID",
         "name": "BID CORP LTD",
-        "weight": 0.071
+        "weight": 7.1
       },
       {
         "ticker": "CPI",
         "name": "CAPITEC",
-        "weight": 0.1076
+        "weight": 10.76
       },
       {
         "ticker": "DSY",
         "name": "DISCOVERY",
-        "weight": 0.0574
+        "weight": 5.74
       },
       {
         "ticker": "EXX",
         "name": "EXXARO RESOURCES LTD",
-        "weight": 0.0499
+        "weight": 4.99
       },
       {
         "ticker": "GRT",
         "name": "GROWTHPOINT",
-        "weight": 0.0248
+        "weight": 2.48
       },
       {
         "ticker": "INP",
         "name": "INVESTECP",
-        "weight": 0.023799999999999998
+        "weight": 2.38
       },
       {
         "ticker": "LHC",
         "name": "LIFE HEALTHCARE GROU",
-        "weight": 0.009300000000000001
+        "weight": 0.93
       },
       {
         "ticker": "MTM",
         "name": "MTM MOMENTUM METROPOLITAN HOLDINGS LTD",
-        "weight": 0.0126
+        "weight": 1.26
       },
       {
         "ticker": "MTN",
         "name": "MTN GROUP",
-        "weight": 0.1272
+        "weight": 12.72
       },
       {
         "ticker": "N91",
         "name": "Ninety One Plc",
-        "weight": 0.0052
+        "weight": 0.52
       },
       {
         "ticker": "NED",
         "name": "NEDBANK",
-        "weight": 0.0652
+        "weight": 6.52
       },
       {
         "ticker": "NTC",
         "name": "NETCARE",
-        "weight": 0.009300000000000001
+        "weight": 0.93
       },
       {
         "ticker": "OMN",
         "name": "OMNIA",
-        "weight": 0.0069
+        "weight": 0.69
       },
       {
         "ticker": "OMU",
         "name": "OLD MUTUAL LTD",
-        "weight": 0.0327
+        "weight": 3.27
       },
       {
         "ticker": "RBX",
         "name": "RAUBEX GROUP LTD",
-        "weight": 0.0069
+        "weight": 0.69
       },
       {
         "ticker": "RDF",
         "name": "REDEFINE",
-        "weight": 0.0131
+        "weight": 1.31
       },
       {
         "ticker": "SAP",
         "name": "SAPPI",
-        "weight": 0.0113
+        "weight": 1.13
       },
       {
         "ticker": "SNT",
         "name": "SANTAM",
-        "weight": 0.0060999999999999995
+        "weight": 0.61
       },
       {
         "ticker": "SOL",
         "name": "SASOL",
-        "weight": 0.1175
+        "weight": 11.75
       },
       {
         "ticker": "SUI",
         "name": "SUN INT LTD",
-        "weight": 0.0042
+        "weight": 0.42
       },
       {
         "ticker": "TBS",
         "name": "TIGBRANDS",
-        "weight": 0.0337
+        "weight": 3.37
       },
       {
         "ticker": "TFG",
         "name": "THE FOSCHINI GROUP LTD",
-        "weight": 0.0446
+        "weight": 4.46
       },
       {
         "ticker": "TKG",
         "name": "TELKOM",
-        "weight": 0.016399999999999998
+        "weight": 1.64
       },
       {
         "ticker": "TRU",
         "name": "TRUWORTHS",
-        "weight": 0.031
+        "weight": 3.1
       },
       {
         "ticker": "WBO",
         "name": "WBHOVCO",
-        "weight": 0.008199999999999999
+        "weight": 0.82
       }
     ],
     "is_tfsa_eligible": true
   },
   {
-    "id": "10X-CSP500",
+    "id": "CSP500",
     "name": "10X S&P 500 Index Feeder ETF",
     "provider": "10X",
     "holdings": [
