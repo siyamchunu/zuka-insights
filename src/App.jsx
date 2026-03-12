@@ -7,6 +7,8 @@ import SectorBreakdown from './components/SectorBreakdown';
 import DisclaimerModal from './components/DisclaimerModal';
 import CookieConsent from './components/CookieConsent';
 import Footer from './components/Footer';
+import ETFComparisonView from './components/ETFComparisonView';
+import DistributionHistoryView from './components/DistributionHistoryView';
 
 function App() {
   const [etfData, setEtfData] = useState(null);
@@ -16,6 +18,8 @@ function App() {
   const [etfBId, setEtfBId] = useState('');
   const [isAnalyzing, setIsAnalyzing] = useState(false);
   const [result, setResult] = useState(null);
+  const [appView, setAppView] = useState('overlap'); // 'overlap' | 'compare' | 'distributions'
+  const [distributionEtfId, setDistributionEtfId] = useState(null);
 
   useEffect(() => {
     fetch('/data/etfs.json')
@@ -250,13 +254,44 @@ function App() {
               />
 
               <div className="pt-4">
-                <button 
-                    onClick={handleAnalyze}
-                    disabled={!etfAId || !etfBId || isAnalyzing}
-                    aria-label="Analyze overlap between selected ETFs"
+                {/* Mode toggle */}
+                <div className="flex rounded-lg overflow-hidden border border-sage mb-4" role="group" aria-label="View mode">
+                  <button
+                    type="button"
+                    onClick={() => setAppView('overlap')}
+                    aria-pressed={appView === 'overlap'}
+                    className={`flex-1 py-2 text-sm font-medium transition-colors ${
+                      appView === 'overlap'
+                        ? 'bg-forest text-lime'
+                        : 'bg-white text-forest hover:bg-sage'
+                    }`}
+                  >
+                    📊 Overlap
+                  </button>
+                  <button
+                    type="button"
+                    onClick={() => setAppView('compare')}
+                    aria-pressed={appView === 'compare' || appView === 'distributions'}
+                    className={`flex-1 py-2 text-sm font-medium transition-colors ${
+                      appView === 'compare' || appView === 'distributions'
+                        ? 'bg-forest text-lime'
+                        : 'bg-white text-forest hover:bg-sage'
+                    }`}
+                  >
+                    📋 Compare
+                  </button>
+                </div>
+
+                <button
+                    type="button"
+                    onClick={appView === 'compare' ? () => setAppView('compare') : handleAnalyze}
+                    disabled={!etfAId || !etfBId || (appView !== 'compare' && isAnalyzing)}
+                    aria-label={appView === 'compare' ? 'Compare selected ETFs' : 'Analyze overlap between selected ETFs'}
                     className="w-full h-16 bg-forest text-lime rounded-2xl font-bold text-lg hover:bg-forest/90 active:scale-[0.98] transition-all disabled:opacity-50 disabled:cursor-not-allowed flex items-center justify-center gap-3 shadow-lg shadow-forest/20 group"
                 >
-                    {isAnalyzing ? (
+                    {appView === 'compare' ? (
+                      <>📋 Compare Funds <ArrowRight size={24} className="group-hover:translate-x-1 transition-transform" /></>
+                    ) : isAnalyzing ? (
                     <span className="animate-pulse">Analyzing...</span>
                     ) : (
                     <>Analyze Overlap <ArrowRight size={24} className="group-hover:translate-x-1 transition-transform" /></>
@@ -285,7 +320,46 @@ function App() {
           </aside>
 
           {/* Right Panel: Results */}
-          <section className="lg:col-span-8 space-y-6 min-h-[50vh]" aria-label="Overlap analysis results">
+          <section className="lg:col-span-8 space-y-6 min-h-[50vh]" aria-label="Analysis results">
+
+            {/* Distribution History View */}
+            {appView === 'distributions' && distributionEtfId && (() => {
+              const etf = etfData.find(e => e.id === distributionEtfId);
+              if (!etf) return null;
+              return (
+                <DistributionHistoryView
+                  etf={etf}
+                  onBack={() => setAppView('compare')}
+                />
+              );
+            })()}
+
+            {/* Comparison View */}
+            {appView === 'compare' && etfAId && etfBId && (
+              <ETFComparisonView
+                etfs={[etfData.find(e => e.id === etfAId), etfData.find(e => e.id === etfBId)].filter(Boolean)}
+                onViewDistributions={(id) => {
+                  setDistributionEtfId(id);
+                  setAppView('distributions');
+                }}
+                onBack={() => setAppView('overlap')}
+              />
+            )}
+
+            {/* Compare mode prompt when only one ETF selected */}
+            {appView === 'compare' && (!etfAId || !etfBId) && (
+              <div className="h-full flex flex-col items-center justify-center bg-white/40 rounded-[2rem] border-2 border-dashed border-forest/5 p-12 text-center" role="status">
+                <div className="w-20 h-20 bg-bone rounded-full flex items-center justify-center mb-6" aria-hidden="true">
+                    <BarChart2 size={40} className="text-forest/20" strokeWidth={1.5} />
+                </div>
+                <h2 className="text-forest font-bold text-lg mb-2">Select Two ETFs</h2>
+                <p className="text-forest/40 font-medium max-w-xs mx-auto">Please select a second ETF to compare side-by-side.</p>
+              </div>
+            )}
+
+            {/* Existing overlap view - only show when appView === 'overlap' */}
+            {appView === 'overlap' && (
+            <>
             {!result ? (
               <div className="h-full flex flex-col items-center justify-center bg-white/40 rounded-[2rem] border-2 border-dashed border-forest/5 p-12 text-center" role="status">
                 <div className="w-20 h-20 bg-bone rounded-full flex items-center justify-center mb-6" aria-hidden="true">
@@ -328,7 +402,7 @@ function App() {
                 {/* Summary Card */}
                 <article className="bg-forest text-bone rounded-[2.5rem] p-8 md:p-12 relative overflow-hidden shadow-2xl shadow-forest/20" aria-label="ETF overlap summary">
                   {/* Decorative mesh gradient */}
-                  <div className="absolute top-0 right-0 w-[600px] h-[600px] bg-gradient-radial from-emerald-900/40 to-transparent opacity-50 blur-3xl -translate-y-1/2 translate-x-1/3 pointer-events-none" aria-hidden="true"></div>
+                  <div className="absolute top-0 right-0 w-[600px] h-[600px] opacity-50 blur-3xl -translate-y-1/2 translate-x-1/3 pointer-events-none" style={{ background: 'radial-gradient(circle, rgba(6, 78, 59, 0.4), transparent)' }} aria-hidden="true"></div>
                   
                   <div className="grid md:grid-cols-2 gap-12 items-center relative z-10">
                     <div>
@@ -379,6 +453,8 @@ function App() {
                   nameB={result.etfBName}
                 />
               </div>
+            )}
+            </>
             )}
           </section>
 
