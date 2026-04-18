@@ -13,6 +13,9 @@
   # Caching: HTML pages — short cache, always revalidate
   Cache-Control: public, max-age=0, must-revalidate
 
+  # AI agent discovery headers
+  Link: </sitemap.xml>; rel="sitemap", </llms.txt>; rel="alternate"; type="text/markdown"
+
 /assets/*
   # Caching: Vite hashed assets — long cache (immutable)
   Cache-Control: public, max-age=31536000, immutable

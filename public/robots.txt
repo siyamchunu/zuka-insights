@@ -5,6 +5,7 @@
 # Our content is free educational material for SA investors.
 
 User-agent: *
+Content-Signal: search=yes,ai-input=yes,ai-train=no
 Allow: /
 
 # AI / LLM Crawlers — explicitly welcomed
@@ -29,6 +30,9 @@ Allow: /
 User-agent: Claude-Web
 Allow: /
 
+User-agent: ClaudeBot
+Allow: /
+
 User-agent: PerplexityBot
 Allow: /
 
@@ -48,4 +52,4 @@ Allow: /
 Sitemap: https://zuka.loggedon.co.za/sitemap.xml
 
 # LLM-friendly site description
-# See /llms.txt for structured information about this site
+Llms-Txt: https://zuka.loggedon.co.za/llms.txt
