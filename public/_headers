@@ -48,3 +48,9 @@
 /.well-known/*
   Cache-Control: public, max-age=86400
   Access-Control-Allow-Origin: *
+
+/.well-known/agent-skills/index.json
+  Content-Type: application/json
+
+/.well-known/agent-skills/etf-analysis/SKILL.md
+  Content-Type: text/markdown; charset=utf-8

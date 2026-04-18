@@ -1,0 +1,12 @@
+{
+  "$schema": "https://schemas.agentskills.io/discovery/0.2.0/schema.json",
+  "skills": [
+    {
+      "name": "etf-analysis",
+      "type": "skill-md",
+      "description": "Retrieve South African ETF data and overlap analysis from the Zuka Insights ETF Overlap Analyzer for JSE-listed funds.",
+      "url": "/.well-known/agent-skills/etf-analysis/SKILL.md",
+      "digest": "sha256:1ae6f0c6df8bcdb4d2842aad5545b7e6df1b2ef2107dfb99754d71a3af25b2d9"
+    }
+  ]
+}
